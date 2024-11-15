@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -50,69 +50,48 @@
     font-weight: bold;
   }
   
-  /* Banner */
-  .banner {
-    background: url('banner.jpg') center/cover;
-    color: white;
-    text-align: center;
-    padding: 5rem 1rem;
+  /* Perfil de Usuario */
+  .perfil-usuario {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
   }
   
-  .banner h2 {
-    font-size: 2.5rem;
+  .informacion-personal, .reservas {
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
   }
   
-  .banner button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #003580;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Cartelera */
-  .cartelera {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
-  .cartelera h2 {
-    font-size: 2rem;
+  .informacion-personal h2, .reservas h2 {
+    font-size: 1.8rem;
     margin-bottom: 1rem;
   }
   
-  .peliculas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+  .detalle-usuario p, .reserva p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
   }
   
-  .pelicula {
-    width: 200px;
-    text-align: center;
-  }
-  
-  .pelicula img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .pelicula h3 {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  .pelicula button {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     background-color: #003580;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Estilos de Reserva */
+  .reserva {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
   }
   
   /* Pie de página */

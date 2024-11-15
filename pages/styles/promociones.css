@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -34,7 +34,6 @@
     font-size: 1.5rem;
     text-align: left;
   }
-  
   header nav ul {
     display: flex;
     list-style: none;
@@ -50,69 +49,68 @@
     font-weight: bold;
   }
   
-  /* Banner */
-  .banner {
-    background: url('banner.jpg') center/cover;
-    color: white;
-    text-align: center;
-    padding: 5rem 1rem;
+  /* Promociones */
+  .promociones {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
   }
   
-  .banner h2 {
-    font-size: 2.5rem;
-  }
-  
-  .banner button {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #003580;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Cartelera */
-  .cartelera {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
-  .cartelera h2 {
+  .promociones h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
   }
   
-  .peliculas {
+  .lista-promociones {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
+    justify-content: center;
   }
   
-  .pelicula {
-    width: 200px;
+  .promocion {
+    width: 300px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .promocion:hover {
+    transform: scale(1.05);
+  }
+  
+  .promocion img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info-promocion {
+    padding: 1rem;
     text-align: center;
   }
   
-  .pelicula img {
-    width: 100%;
-    border-radius: 8px;
+  .info-promocion h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
   }
   
-  .pelicula h3 {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
+  .info-promocion p {
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem;
+    color: #666;
   }
   
-  .pelicula button {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
+  .info-promocion button {
     background-color: #003580;
     color: white;
     border: none;
-    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     border-radius: 4px;
+    cursor: pointer;
   }
   
   /* Pie de página */
