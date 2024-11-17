@@ -27,3 +27,18 @@ Generar una interfaz fiel al proyecto que permita la emulación del funcionamien
 1. Escribe el siguiente enlace: `https://ethan-sarricolea.github.io/CineUv.github.io/`
 
 2. [Haz click aqui](https://ethan-sarricolea.github.io/CineUv.github.io/)
+
+## Pendientes
+
+- Inicio de sesion - E
+- Registro - E
+- Cartelera - Crear un json Funciones para cartelera - E o E
+- Promociones - Yael
+- Combos - Abraham
+- Reservas - Jordi
+
+### Modificaciones
+
+- Comprar
+- Editar informacion
+- Ver detalles de reservación

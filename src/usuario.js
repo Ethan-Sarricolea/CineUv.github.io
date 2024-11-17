@@ -1,5 +1,5 @@
 /**
- * Description: Este script recopilara la informacion del usuario con su id y lo conectara para editarla
+ * Description: Este script encontrara la informacion de un usuario según su id y la mostrará
  * Author:
  */
 

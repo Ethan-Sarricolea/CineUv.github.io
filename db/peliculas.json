@@ -1,4 +1,4 @@
-{
+[{
     "id": 1,
     "nombre": "Venom 2 Carnage liberado",
     "sinopsis": "Después de encontrar un cuerpo anfitrión en el periodista de investigación Eddie Brock,el simbionte alienígena debe enfrentarse a un nuevo enemigo, Carnage, el alter ego del asesino en serie Cletus Kasady",
@@ -7,4 +7,24 @@
     "estreno": "01-10-2021",
     "salida": "14-10-2021",
     "portada": "https://m.media-amazon.com/images/I/917scoQti8L.jpg"
-}
+},
+{
+    "id": 2,
+    "nombre": "Norbit",
+    "sinopsis": "Tras ser abandonado en la puerta de un restaurante chino, Norbit es criado por el Sr. Wong. Ya de mayor, el joven se ve obligado a casarse con Rasputia, la reina de la comida rápida. Es entonces cuando reaparece en su vida Kate, su amor de infancia.",
+    "clasificacion": "PG-13",
+    "duracion": "01:37",
+    "estreno": "01-10-2021",
+    "salida": "14-10-2021",
+    "portada": "https://m.media-amazon.com/images/I/51sHPYJCFrL._AC_UF894,1000_QL80_.jpg"
+},
+{
+    "id": 3,
+    "nombre": "Un Lugar en Silencio: Día Uno",
+    "sinopsis": "Una mujer trata de sobrevivir durante un ataque alienígena en la ciudad de Nueva York. Tras unirse a una comunidad de supervivientes, el grupo se da cuenta de que deben mantenerse totalmente en silencio, dado que los cazan cuando emiten ruidos.",
+    "clasificacion": "PG-13",
+    "duracion": "01:37",
+    "estreno": "01-10-2021",
+    "salida": "14-10-2021",
+    "portada": "https://img-tomatazos.buscafs.com/441694/441694.jpg"
+}]

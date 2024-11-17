@@ -83,7 +83,7 @@
     margin-bottom: 1rem;
   }
   
-  .peliculas {
+  #peliculas {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
