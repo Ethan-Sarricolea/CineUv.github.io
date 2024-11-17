@@ -1,3 +1,12 @@
 [{
-    "lalala":"lalalal"
+    "correo":"esarricolea@gmail.com",
+    "contraseña":"12345",
+    "nombre":"Ethan",
+    "apellido":"Sarricolea",
+    "genero":1,
+    "nacimiento":"16-06-2005",
+    "codigo_postal":"96535", 
+    "ciudad": "coatzacoalcos",
+    "pais": "Mexico",
+    "num_telefono": "9211514220"
 }]
