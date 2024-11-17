@@ -32,13 +32,13 @@ Generar una interfaz fiel al proyecto que permita la emulación del funcionamien
 
 - Inicio de sesion - E
 - Registro - E
-- Cartelera - Crear un json Funciones para cartelera - E o E
+- Cartelera - E
 - Promociones - Yael
 - Combos - Abraham
 - Reservas - Jordi
 
 ### Modificaciones
-
+ 
 - Comprar
 - Editar informacion
 - Ver detalles de reservación

@@ -27,4 +27,15 @@
     "estreno": "01-10-2021",
     "salida": "14-10-2021",
     "portada": "https://img-tomatazos.buscafs.com/441694/441694.jpg"
-}]
+},
+{
+    "id": 4,
+    "nombre": "Inactividad paranormal 2",
+    "sinopsis": "A Haunted House 2, es una secuela de la película de comedia estadounidense estrenada en enero del 2013. Se estrenó el 18 de abril de 2014 en los Estados Unidos.​",
+    "clasificacion": "PG-13",
+    "duracion": "01:37",
+    "estreno": "01-10-2014",
+    "salida": "14-10-2014",
+    "portada": "https://www.tvtime.com/_next/image?url=https%3A%2F%2Fartworks.thetvdb.com%2Fbanners%2Fv4%2Fmovie%2F5785%2Fposters%2F6527d8906ecdf.jpg&w=640&q=75"
+}
+]

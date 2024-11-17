@@ -38,7 +38,6 @@ function cargarPeliculas() {
       // Crear botón de compra
       const boton = document.createElement('button');
       boton.textContent = 'Comprar Boletos';
-      // Aquí puedes agregar una funcionalidad al botón si lo necesitas
       peliculaDiv.appendChild(boton);
   
       // Agregar el div de la película al contenedor
