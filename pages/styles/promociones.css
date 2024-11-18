@@ -101,13 +101,15 @@ header nav ul li a:hover {
   text-align: center;
 }
 
-.info-promocion h3 {
+.promocion h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   color: #003580;
+  text-align: center; 
 }
 
-.info-promocion p {
+
+.promocion p {
   font-size: 1rem;
   margin: 0.5rem 0 1rem;
   color: #666;

@@ -14,7 +14,7 @@ const mapearGenero = (genero) => (genero === 1 ? "Masculino" : "Femenino");
 
 // Cargar usuarios desde el archivo JSON
 let usuarios = [];
-fetch('../db/usuario.json')
+fetch('/db/usuario.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error("Error al conectar con base de datos"); // Generar un error de conexion
