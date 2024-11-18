@@ -63,7 +63,7 @@
     margin-bottom: 2rem;
   }
   
-  .lista-alimentos {
+  #lista-alimentos {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
