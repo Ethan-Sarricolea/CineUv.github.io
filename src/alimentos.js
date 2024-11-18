@@ -4,7 +4,7 @@
  */
 // Función para cargar el archivo JSON
 function cargarAlimentos() {
-    fetch('/db/combos.json')
+    fetch('../db/combos.json')
       .then(response => response.json())  // Convertimos la respuesta a un objeto JSON
       .then(datos => mostrarAlimentos(datos))  // Llamamos a la función para mostrar los alimentos
       .catch(error => console.error('Error al cargar el archivo JSON:', error));  // Si hay un error
