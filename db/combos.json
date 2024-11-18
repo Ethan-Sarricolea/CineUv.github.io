@@ -1,0 +1,33 @@
+[{
+    "id": 1,
+    "nombre": "Combo Cuates",
+    "descripcion": "1 palomitas para llevar (285 gr) y 2 refrescos jumbo (1.2 ltr).",
+    "imagen": "https://res.cloudinary.com/spydeals/image/upload/w_1140,f_auto,q_auto,c_limit,pg_1/cdn/DNVH5PjyqjZBKGioY696c6YSoVXWvZl4JmATvkmA.png",
+    "precio": "$246.00",
+    "categoria": "Combos"
+},
+{
+    "id": 2,
+    "nombre": "Hot Dog Individual",
+    "descripcion": "Delicioso Hot Dog Cinépolis, elaborado con salchicha Óscar Mayer.",
+    "imagen": "https://static.promodescuentos.com/threads/raw/lnpDD/771812_1/re/768x768/qt/60/771812_1.jpg",
+    "precio": "$75.00",
+    "categoria": "Alimentos"
+},
+{
+    "id": 3,
+    "nombre": "Nachos Chicos",
+    "descripcion": "Exquisitos nachos Clásicos, Doritos o Mix, acompañados de queso cheddar.",
+    "imagen": "https://images.sabroson.com.mx/insecure/fill/300/300/ce/0/plain/https://sabroson-assests.s3.us-west-2.amazonaws.com/af268c/prods/PJ6Jh6JIRysj43Z3LIBulUWiGJqIM4fldeMvqgJC.webp@webp",
+    "precio": "$70.00",
+    "categoria": "Snacks"
+},
+{
+    "id": 4,
+    "nombre": "Refresco",
+    "descripcion": "Refresco.",
+    "imagen": "https://cdn-3.expansion.mx/dims4/default/6babeb5/2147483647/strip/true/crop/727x452+0+0/resize/1200x746!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fc5%2Fc1%2Fdb21fc8d48e586707ace989b9372%2Fcaptura-de-pantalla-2018-02-13-a-la-s-13.06.13.png",
+    "precio": "$80.00",
+    "categoria": "Bebidas"
+}
+]
