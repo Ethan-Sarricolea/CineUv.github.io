@@ -1,9 +1,10 @@
 /**
- * Description: Este script buscara en el archivo JSON y encontrara un usuario para su inicio de sesion por su correo y contraseña
- * Author:
- * 
- * Falta la interfaz
+ * Description: Este script buscara en el archivo JSON y encontrara un usuario para 
+ * su inicio de sesion por su correo y contraseña
+ * Author: Elias
  */
+
+//
 const loginForm = document.getElementById("login-form");
 const messageElement = document.getElementById("message");
 const userInfoContainer = document.getElementById("user-info");
@@ -13,10 +14,10 @@ const mapearGenero = (genero) => (genero === 1 ? "Masculino" : "Femenino");
 
 // Cargar usuarios desde el archivo JSON
 let usuarios = [];
-fetch("usuarios.json")
+fetch('../db/usuario.json')
   .then((response) => {
     if (!response.ok) {
-      throw new Error("Error al cargar el archivo JSON");
+      throw new Error("Error al conectar con base de datos"); // Generar un error de conexion
     }
     return response.json();
   })
@@ -37,7 +38,7 @@ loginForm.addEventListener("submit", function (event) {
   // Buscar usuario en el JSON
   const usuarioEncontrado = usuarios.find(
     (usuario) =>
-      usuario.correo === emailInput && usuario.contraseña === passwordInput
+      usuario.correo == emailInput && usuario.contraseña == passwordInput
   );
 
   if (usuarioEncontrado) {

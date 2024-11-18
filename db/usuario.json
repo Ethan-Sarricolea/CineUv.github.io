@@ -1,12 +1,13 @@
 [{
-    "correo":"esarricolea@gmail.com",
+    "id":1,
+    "correo":"example@gmail.com",
     "contraseña":"12345",
-    "nombre":"Ethan",
-    "apellido":"Sarricolea",
+    "nombre":"Ejemplo",
+    "apellido":"User",
     "genero":1,
     "nacimiento":"16-06-2005",
     "codigo_postal":"96535", 
-    "ciudad": "coatzacoalcos",
+    "ciudad": "Coatzacoalcos",
     "pais": "Mexico",
-    "num_telefono": "9211514220"
+    "num_telefono": "12345678"
 }]
