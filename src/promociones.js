@@ -4,7 +4,7 @@
  */
 function cargarPromociones() {
     // Cargar datos del archivo JSON
-    fetch('db/promociones.json') 
+    fetch('../db/promociones.json') 
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
