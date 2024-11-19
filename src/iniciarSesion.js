@@ -53,6 +53,11 @@ loginForm.addEventListener("submit", function (event) {
     document.getElementById("genero").textContent = mapearGenero(
       usuarioEncontrado.genero
     );
+
+    // verificar si hay un id
+    // Guardar el id en info.json
+    // Checar si hay un id y de haberlo obtiene la informacion de usuario.json
+    
     document.getElementById("nacimiento").textContent =
       usuarioEncontrado.nacimiento;
     document.getElementById("codigo_postal").textContent =

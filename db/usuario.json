@@ -10,4 +10,17 @@
     "ciudad": "Coatzacoalcos",
     "pais": "Mexico",
     "num_telefono": "12345678"
+},
+{
+    "id":2,
+    "correo":"user123@gmail.com",
+    "contraseña":"12345",
+    "nombre":"Ejemplo",
+    "apellido":"User",
+    "genero":1,
+    "nacimiento":"16-06-2005",
+    "codigo_postal":"96535", 
+    "ciudad": "Coatzacoalcos",
+    "pais": "Mexico",
+    "num_telefono": "12345678"
 }]
