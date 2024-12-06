@@ -30,20 +30,7 @@ Generar una interfaz fiel al proyecto que permita la emulación del funcionamien
 
 ## Pendientes
 
-- Inicio de sesion - E 1/2 (LISTO)
-- Registro - E (PENDIENTE)
-- Promociones - Yael (LISTO)
-- Combos - Abraham (LISTO)
-- Reservas - Jordi (PENDIENTE)
-
-- Como mantener una sesión iniciada?????
-
-### Modificaciones
- 
-- Comprar boletos - 
-- comprar comida - 
-- Cartelera - 
-- Editar informacion - iniciar sesion
-
-
-- Ver detalles de reservación (luego)
+- Pregunta. (Que necesita hacer la interfaz?)
+  - comprar una funcion
+  - ver funciones
+  - ver peliculas
