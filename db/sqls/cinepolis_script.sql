@@ -78,10 +78,10 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Funcion` (
   `Pelicula_pelicula_id` INT NOT NULL,
   `Sala_sala_id` INT NOT NULL,
   PRIMARY KEY (`funcion_id`, `Cine_cine_id`, `Pelicula_pelicula_id`, `Sala_sala_id`),
-  UNIQUE INDEX `hora_termino_UNIQUE` (`hora_termino` ASC) VISIBLE,
-  INDEX `fk_Funcion_Cine_idx` (`Cine_cine_id` ASC) VISIBLE,
-  INDEX `fk_Funcion_Pelicula1_idx` (`Pelicula_pelicula_id` ASC) VISIBLE,
-  INDEX `fk_Funcion_Sala1_idx` (`Sala_sala_id` ASC) VISIBLE,
+  UNIQUE INDEX `hora_termino_UNIQUE` (`hora_termino` ASC),
+  INDEX `fk_Funcion_Cine_idx` (`Cine_cine_id` ASC),
+  INDEX `fk_Funcion_Pelicula1_idx` (`Pelicula_pelicula_id` ASC),
+  INDEX `fk_Funcion_Sala1_idx` (`Sala_sala_id` ASC),
   CONSTRAINT `fk_Funcion_Cine`
     FOREIGN KEY (`Cine_cine_id`)
     REFERENCES `mydb`.`Cine` (`cine_id`)
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Asiento` (
   `fila` CHAR(1) NOT NULL,
   `Sala_sala_id` INT NOT NULL,
   PRIMARY KEY (`asiento_id`, `Sala_sala_id`),
-  INDEX `fk_Asiento_Sala1_idx` (`Sala_sala_id` ASC) VISIBLE,
+  INDEX `fk_Asiento_Sala1_idx` (`Sala_sala_id` ASC),
   CONSTRAINT `fk_Asiento_Sala1`
     FOREIGN KEY (`Sala_sala_id`)
     REFERENCES `mydb`.`Sala` (`sala_id`)
@@ -139,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Venta` (
   `fecha_venta` DATETIME NOT NULL,
   `Tarjeta_numero_tarjeta` INT NOT NULL,
   PRIMARY KEY (`venta_id`, `Tarjeta_numero_tarjeta`),
-  INDEX `fk_Venta_Tarjeta1_idx` (`Tarjeta_numero_tarjeta` ASC) VISIBLE,
+  INDEX `fk_Venta_Tarjeta1_idx` (`Tarjeta_numero_tarjeta` ASC),
   CONSTRAINT `fk_Venta_Tarjeta1`
     FOREIGN KEY (`Tarjeta_numero_tarjeta`)
     REFERENCES `mydb`.`Tarjeta` (`numero_tarjeta`)
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Boleto` (
   `numero_transaccion` VARCHAR(10) NOT NULL,
   `Venta_venta_id` INT NOT NULL,
   PRIMARY KEY (`boleto_id`, `Venta_venta_id`),
-  INDEX `fk_Boleto_Venta1_idx` (`Venta_venta_id` ASC) VISIBLE,
+  INDEX `fk_Boleto_Venta1_idx` (`Venta_venta_id` ASC),
   CONSTRAINT `fk_Boleto_Venta1`
     FOREIGN KEY (`Venta_venta_id`)
     REFERENCES `mydb`.`Venta` (`venta_id`)
@@ -177,8 +177,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Lugar` (
   `Asiento_Sala_sala_id` INT NOT NULL,
   `Boleto_boleto_id` INT NOT NULL,
   PRIMARY KEY (`lugar_id`, `Asiento_asiento_id`, `Asiento_Sala_sala_id`, `Boleto_boleto_id`),
-  INDEX `fk_Lugar_Asiento1_idx` (`Asiento_asiento_id` ASC, `Asiento_Sala_sala_id` ASC) VISIBLE,
-  INDEX `fk_Lugar_Boleto1_idx` (`Boleto_boleto_id` ASC) VISIBLE,
+  INDEX `fk_Lugar_Asiento1_idx` (`Asiento_asiento_id` ASC, `Asiento_Sala_sala_id` ASC),
+  INDEX `fk_Lugar_Boleto1_idx` (`Boleto_boleto_id` ASC),
   CONSTRAINT `fk_Lugar_Asiento1`
     FOREIGN KEY (`Asiento_asiento_id` , `Asiento_Sala_sala_id`)
     REFERENCES `mydb`.`Asiento` (`asiento_id` , `Sala_sala_id`)
@@ -217,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Producto` (
   `cantidad_productos` INT NOT NULL,
   `Categoria_categoria_id` INT NOT NULL,
   PRIMARY KEY (`producto_id`, `Categoria_categoria_id`),
-  INDEX `fk_Producto_Categoria1_idx` (`Categoria_categoria_id` ASC) VISIBLE,
+  INDEX `fk_Producto_Categoria1_idx` (`Categoria_categoria_id` ASC),
   CONSTRAINT `fk_Producto_Categoria1`
     FOREIGN KEY (`Categoria_categoria_id`)
     REFERENCES `mydb`.`Categoria` (`categoria_id`)
@@ -235,8 +235,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Producto_has_Producto` (
   `Producto_producto_id1` INT NOT NULL,
   `Producto_Categoria_categoria_id1` INT NOT NULL,
   PRIMARY KEY (`Producto_producto_id`, `Producto_Categoria_categoria_id`, `Producto_producto_id1`, `Producto_Categoria_categoria_id1`),
-  INDEX `fk_Producto_has_Producto_Producto2_idx` (`Producto_producto_id1` ASC, `Producto_Categoria_categoria_id1` ASC) VISIBLE,
-  INDEX `fk_Producto_has_Producto_Producto1_idx` (`Producto_producto_id` ASC, `Producto_Categoria_categoria_id` ASC) VISIBLE,
+  INDEX `fk_Producto_has_Producto_Producto2_idx` (`Producto_producto_id1` ASC, `Producto_Categoria_categoria_id1` ASC),
+  INDEX `fk_Producto_has_Producto_Producto1_idx` (`Producto_producto_id` ASC, `Producto_Categoria_categoria_id` ASC),
   CONSTRAINT `fk_Producto_has_Producto_Producto1`
     FOREIGN KEY (`Producto_producto_id` , `Producto_Categoria_categoria_id`)
     REFERENCES `mydb`.`Producto` (`producto_id` , `Categoria_categoria_id`)
@@ -267,7 +267,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Empleado` (
   `Venta_venta_id` INT NOT NULL,
   `Venta_Tarjeta_numero_tarjeta` INT NOT NULL,
   PRIMARY KEY (`empleado_id`, `Venta_venta_id`, `Venta_Tarjeta_numero_tarjeta`),
-  INDEX `fk_Empleado_Venta1_idx` (`Venta_venta_id` ASC, `Venta_Tarjeta_numero_tarjeta` ASC) VISIBLE,
+  INDEX `fk_Empleado_Venta1_idx` (`Venta_venta_id` ASC, `Venta_Tarjeta_numero_tarjeta` ASC),
   CONSTRAINT `fk_Empleado_Venta1`
     FOREIGN KEY (`Venta_venta_id` , `Venta_Tarjeta_numero_tarjeta`)
     REFERENCES `mydb`.`Venta` (`venta_id` , `Tarjeta_numero_tarjeta`)
@@ -285,7 +285,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Punto_venta` (
   `fondo_cambio` DOUBLE NOT NULL,
   `Cine_cine_id` INT NOT NULL,
   PRIMARY KEY (`punto_venta_id`, `Cine_cine_id`),
-  INDEX `fk_Punto_venta_Cine1_idx` (`Cine_cine_id` ASC) VISIBLE,
+  INDEX `fk_Punto_venta_Cine1_idx` (`Cine_cine_id` ASC),
   CONSTRAINT `fk_Punto_venta_Cine1`
     FOREIGN KEY (`Cine_cine_id`)
     REFERENCES `mydb`.`Cine` (`cine_id`)
@@ -315,8 +315,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Promocion_has_Cine` (
   `Promocion_promocion_id` INT NOT NULL,
   `Cine_cine_id` INT NOT NULL,
   PRIMARY KEY (`Promocion_promocion_id`, `Cine_cine_id`),
-  INDEX `fk_Promocion_has_Cine_Cine1_idx` (`Cine_cine_id` ASC) VISIBLE,
-  INDEX `fk_Promocion_has_Cine_Promocion1_idx` (`Promocion_promocion_id` ASC) VISIBLE,
+  INDEX `fk_Promocion_has_Cine_Cine1_idx` (`Cine_cine_id` ASC),
+  INDEX `fk_Promocion_has_Cine_Promocion1_idx` (`Promocion_promocion_id` ASC),
   CONSTRAINT `fk_Promocion_has_Cine_Promocion1`
     FOREIGN KEY (`Promocion_promocion_id`)
     REFERENCES `mydb`.`Promocion` (`promocion_id`)
@@ -337,8 +337,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Promocion_has_Tarjeta` (
   `Promocion_promocion_id` INT NOT NULL,
   `Tarjeta_numero_tarjeta` INT NOT NULL,
   PRIMARY KEY (`Promocion_promocion_id`, `Tarjeta_numero_tarjeta`),
-  INDEX `fk_Promocion_has_Tarjeta_Tarjeta1_idx` (`Tarjeta_numero_tarjeta` ASC) VISIBLE,
-  INDEX `fk_Promocion_has_Tarjeta_Promocion1_idx` (`Promocion_promocion_id` ASC) VISIBLE,
+  INDEX `fk_Promocion_has_Tarjeta_Tarjeta1_idx` (`Tarjeta_numero_tarjeta` ASC),
+  INDEX `fk_Promocion_has_Tarjeta_Promocion1_idx` (`Promocion_promocion_id` ASC),
   CONSTRAINT `fk_Promocion_has_Tarjeta_Promocion1`
     FOREIGN KEY (`Promocion_promocion_id`)
     REFERENCES `mydb`.`Promocion` (`promocion_id`)
@@ -381,8 +381,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Cuenta` (
   `Nivel_nivel_id` INT NOT NULL,
   `Tarjeta_numero_tarjeta` INT NOT NULL,
   PRIMARY KEY (`cuenta_id`, `Nivel_nivel_id`, `Tarjeta_numero_tarjeta`),
-  INDEX `fk_Cuenta_Nivel1_idx` (`Nivel_nivel_id` ASC) VISIBLE,
-  INDEX `fk_Cuenta_Tarjeta1_idx` (`Tarjeta_numero_tarjeta` ASC) VISIBLE,
+  INDEX `fk_Cuenta_Nivel1_idx` (`Nivel_nivel_id` ASC),
+  INDEX `fk_Cuenta_Tarjeta1_idx` (`Tarjeta_numero_tarjeta` ASC),
   CONSTRAINT `fk_Cuenta_Nivel1`
     FOREIGN KEY (`Nivel_nivel_id`)
     REFERENCES `mydb`.`Nivel` (`nivel_id`)
@@ -406,7 +406,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`detalle_venta` (
   `Producto_Categoria_categoria_id` INT NOT NULL,
   `cantidad` INT NOT NULL,
   PRIMARY KEY (`Venta_venta_id`, `Venta_Tarjeta_numero_tarjeta`, `Producto_producto_id`, `Producto_Categoria_categoria_id`),
-  INDEX `fk_detalle_venta_Producto1_idx` (`Producto_producto_id` ASC, `Producto_Categoria_categoria_id` ASC) VISIBLE,
+  INDEX `fk_detalle_venta_Producto1_idx` (`Producto_producto_id` ASC, `Producto_Categoria_categoria_id` ASC),
   CONSTRAINT `fk_detalle_venta_Venta1`
     FOREIGN KEY (`Venta_venta_id` , `Venta_Tarjeta_numero_tarjeta`)
     REFERENCES `mydb`.`Venta` (`venta_id` , `Tarjeta_numero_tarjeta`)
@@ -432,8 +432,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Empleado_Punto_venta` (
   `hora_inicio` TIME NOT NULL,
   `hora_salida` TIME NOT NULL,
   PRIMARY KEY (`Empleado_empleado_id`, `Punto_venta_punto_venta_id`, `Punto_venta_Cine_cine_id`),
-  INDEX `fk_Empleado_has_Punto_venta_Punto_venta1_idx` (`Punto_venta_punto_venta_id` ASC, `Punto_venta_Cine_cine_id` ASC) VISIBLE,
-  INDEX `fk_Empleado_has_Punto_venta_Empleado1_idx` (`Empleado_empleado_id` ASC) VISIBLE,
+  INDEX `fk_Empleado_has_Punto_venta_Punto_venta1_idx` (`Punto_venta_punto_venta_id` ASC, `Punto_venta_Cine_cine_id` ASC),
+  INDEX `fk_Empleado_has_Punto_venta_Empleado1_idx` (`Empleado_empleado_id` ASC),
   CONSTRAINT `fk_Empleado_has_Punto_venta_Empleado1`
     FOREIGN KEY (`Empleado_empleado_id`)
     REFERENCES `mydb`.`Empleado` (`empleado_id`)
