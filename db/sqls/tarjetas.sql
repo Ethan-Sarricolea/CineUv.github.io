@@ -1,12 +1,12 @@
-CREATE TABLE cuentas (
-    numero_tarjeta	INT PRIMARY KEY,
+CREATE TABLE tarjeta (
+    numero_tarjeta	INT PRIMARY KEY, -- Debe ser autoincremental int??????
     estado_activa	TINYINT(1),
     codigo_qr	BLOB NOT NULL,
     cuenta_id	INT NOT NULL,
     FOREIGN KEY (cuenta_id) REFERENCES cuentas(cuenta_id);
 );
 
-INSERT INTO tableName (numero_tarjeta, estado_activa, codigo_qr, cuenta_id) VALUES
+INSERT INTO tarjeta (numero_tarjeta, estado_activa, codigo_qr, cuenta_id) VALUES
 	('12345678901278', '1', NULL, '41'),
 	('12345678901310', '1', NULL, '60'),
 	('12345678901349', '0', NULL, '56'),
