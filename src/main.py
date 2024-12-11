@@ -3,11 +3,13 @@ Description: Ejecucion de la app
 
 """
 
-from App import gui#, conexion
+from App import gui, conexion
 
 def main():
-    app = gui.app()
+    system = conexion.System()
+    app = gui.app(system)
     app.run()
 
 if (__name__ == "__main__"):
     main()
+    print("Fin del programa")
