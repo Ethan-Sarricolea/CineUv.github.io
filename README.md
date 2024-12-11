@@ -28,6 +28,18 @@ Generar una interfaz fiel al proyecto que permita la emulación del funcionamien
 
 2. [Haz click aqui](https://ethan-sarricolea.github.io/CineUv.github.io/)
 
+## Dependencias
+
+Nose.js
+
+MySQL2: `npm install mysql2`
+
+  En caso de el error: No se puede cargar el archivo C:\Program Files\nodejs\npm.ps1 porque la ejecución de scripts 
+  está deshabilitada en este sistema. Para obtener más información, consulta el tema 
+  about_Execution_Policies en https:/go.microsoft.com/fwlink/?LinkID=135170.
+
+Es necesario ejecutar `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` para reintentar instalar mysql2
+
 ## Pendientes
 
 - Pregunta. (Que necesita hacer la interfaz?)
