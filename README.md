@@ -25,19 +25,20 @@ Si no hay conexion a internet o el servidor no esta prendido, habra un error de 
 
 ## Dependencias
 
+Python 3.11 o mayor
 Pillow: `pip install pillow`
 Requsest: `pip install requests`
 Mysql: `pip install mysql-connector-python`
+
+## Modo de uso
+
+Para ejecutar la aplicacio es necesario los siguiente:
+- Realizar la instalacion de las dependencias por medio de `pip`
+- Configurar el usuarrio y contraseña en el codigo `src/App/conexion.py` para permitir la conexion con la BD
+- Ejecutar el codigo main en `src/main.py` para conectar con la base de datos
 
 ## Acceso
 
 1. Escribe el siguiente enlace: `https://ethan-sarricolea.github.io/CineUv.github.io/`
 
 2. [Haz click aqui](https://ethan-sarricolea.github.io/CineUv.github.io/)
-
-## Pendientes
-
-- Pregunta. (Que necesita hacer la interfaz?)
-  - comprar una funcion
-  - ver funciones
-  - ver peliculas
