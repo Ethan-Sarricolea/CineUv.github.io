@@ -7,6 +7,7 @@ Objetivo: Generar una clase "Sistema" que se conecte con la base de datos y perm
 
 import mysql.connector
 from tkinter import messagebox
+import time
 import datetime
 
 class System:
@@ -38,21 +39,23 @@ class System:
                 self.status = False
         except Exception as e:
             pass
-
-        (messagebox.showinfo("Conexion exitosa",
-                             "Se ha establecido conexion con la base de datos") 
-         if self.status is True
-         else messagebox.showerror("Error de conexion",
-                                   "Ha ocurrido un error en la conexion con base de datos"))
-        self.show_tres_peliculas()
+        time.sleep(1.5)
+        if self.status is True:
+            messagebox.showinfo("Conexion exitosa", "Se ha establecido conexion con la base de datos") 
+        else:
+            messagebox.showerror("Error de conexion","Ha ocurrido un error en la conexion con base de datos")
         
-    def show_tres_peliculas(self):
+    def getPelicula(self):
+        while(not self.status): # Espera a que se conecte con base de datos
+            time.sleep(1)
         cursor = self.conexion.cursor()
-        cursor.execute("SELECT nombre_pelicula FROM pelicula ORDER BY fecha_estreno DESC LIMIT 3;")
+        cursor.execute("SELECT portada FROM pelicula ORDER BY fecha_estreno LIMIT 2;")
         resultados = cursor.fetchall()
         for fila in resultados:
             print(fila)
         cursor.close()
+        # print(resultados)
+        return (resultados)
 
     def consulta(self):
         cursor = self.conexion.cursor()
