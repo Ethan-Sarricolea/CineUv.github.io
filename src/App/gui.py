@@ -79,7 +79,7 @@ class app:
             widget.place_forget()  # Quitar cada widget
         self.root.update_idletasks()
 
-    def shoComprarBoleto(self):     # Errorrr????????????
+    def shoComprarBoleto(self):
         self.root.after(100, self.limpiar_ventana)
         print("limpio")
 

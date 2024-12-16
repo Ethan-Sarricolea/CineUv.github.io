@@ -15,14 +15,14 @@ class System:
         self.host = "localhost" # Estos se deben cambiar segun la base de datos
         self.user = "root"
         self.psswd = "12345"
-        self.db = "cinepolis"
+        self.db = "cinepolis2024"
         self.status = False
 
     def conectarBaseDatos(self):
         # Configuración de la conexión
         try:
             self.conexion = mysql.connector.connect(
-                host= self.host,         # Dirección del servidor (localhost si está en tu PC)
+                host= self.host,         # Dirección del servidor (localhost)
                 user=self.user,        # Nombre de usuario de MySQL
                 password= self.psswd, # Contraseña del usuario
                 database= self.db # Nombre de la base de datos
